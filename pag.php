@@ -66,7 +66,7 @@ if (empty($_SESSION['email']) || empty($_SESSION['senha'])) {
         .campo {
             width: 300px;
             display: flex;
-       
+
             margin-top: 2%;
         }
 
@@ -77,17 +77,19 @@ if (empty($_SESSION['email']) || empty($_SESSION['senha'])) {
 
         input,
         button {
-            
+
             padding: 5px;
             border: 1px solid grey;
             background-color: azure;
             border-radius: 10px;
-            margin: 0 auto;
+
         }
-        input{
+
+        input {
             display: flex;
             margin: 0 auto;
         }
+
         .campo {
             display: none;
             margin-bottom: 5%;
@@ -95,7 +97,7 @@ if (empty($_SESSION['email']) || empty($_SESSION['senha'])) {
 
         .campo2 {
             display: none;
-         
+
         }
 
         .campo3 {
@@ -114,6 +116,7 @@ if (empty($_SESSION['email']) || empty($_SESSION['senha'])) {
             font-weight: 600;
             color: #242424;
             width: 200px;
+            margin-right: 10%;
         }
 
         button:hover {
@@ -123,20 +126,24 @@ if (empty($_SESSION['email']) || empty($_SESSION['senha'])) {
             color: aliceblue;
         }
 
-        .Buttons {
+        .CampoUser {
             display: block;
             margin: 0 auto;
             margin-top: 5%;
+
             background-color: white;
             box-shadow: 1px 1px 5px 1px rgb(24, 170, 255);
-            width: 400px;
-            min-height: 300px;
+            width: 70%;
+            min-height: 80%;
             height: auto;
             padding-top: 2%;
             padding-bottom: 2%;
             align-items: center;
-            justify-items: center;
             border-radius: 10px;
+        }
+
+        .Buttons {
+            justify-items: end;
         }
 
         .LogoPataAmiga {
@@ -149,18 +156,45 @@ if (empty($_SESSION['email']) || empty($_SESSION['senha'])) {
             align-items: center;
         }
 
-        li>button{
+        li>button {
             background-color: rgb(50, 163, 255);
             color: aliceblue;
             width: 100px;
         }
-        .nomeUser{
-            color: #242424;
+
+        .nomeUser {
+            color: rgb(50, 163, 255);
         }
-        .TituloBemVindo{
+
+        .TituloBemVindo {
             display: inline;
-         
             text-align: center;
+            margin-left: 4%;
+        }
+
+        .conteudo {
+            margin-top: -5%;
+        }
+
+        .imgIcon {
+            width: 100px;
+            position: absolute;
+            margin-top: 5%;
+            margin-left: 1.5%
+        }
+
+        .linkImgUser {
+            position: absolute;
+            margin-left: 2%;
+            margin-top: 13%;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: 13px;
+            text-decoration: none;
+            color: BLACK;
+        }
+
+        .linkImgUser:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
@@ -307,42 +341,48 @@ if (empty($_SESSION['email']) || empty($_SESSION['senha'])) {
     <main class="conteudo">
         <h2 class="tituloSeuPerfil">Seu perfil</h2>
 
-        <div class="Buttons">
-            <h2 class="TituloBemVindo">Bem Vindo <span class="nomeUser"><?=$_SESSION['nome']?></span></h2>
+        <div class="CampoUser">
+            <img src="img/icons8-usuário-homem-com-círculo-96.png" alt="" class="imgIcon">
+            <a href="#" class="linkImgUser">Alterar Imagem</a>
 
-            <button onclick="Funcao()" style="margin-bottom:2%;margin-top:5%;">Alterar nome de usuário</button>
-            <form action="verificacaoLoginPHP.php" method="post" class="campo">
-                <ul>
-                    <li><input type="text" placeholder="Novo nome de usuário: " name="newNameUser" id="inputNomeUser"></li>
-                    <li><input type='email' name='EmailLogin' placeholder='Digite seu Email: ' id="inputEmail"></li>
-                    <li><input type='password' name='SenhaLogin' placeholder='Digite sua Senha: ' id="inputSenha"></li>
-                    <li><button name="btn" id="btn" type="submit" style="margin:2% 33%">Alterar</button></li>
-                </ul>
+            <h2 class="TituloBemVindo">Bem Vindo <span class="nomeUser"><?= $_SESSION['nome'] ?></span></h2>
+            <div class="Buttons">
 
-            </form>
 
-            <button onclick="FuncaoEmail()" style="margin-bottom:2%">Alterar Email</button>
-            <form action="verificacaoEmailPHP.php" method="post" class="campo2">
-                <ul>
+                <button onclick="Funcao()" style="margin-bottom:2%;margin-top:5%;">Alterar nome de usuário</button>
+                <form action="verificacaoLoginPHP.php" method="post" class="campo" style="margin-right: 4%;">
+                    <ul>
+                        <li><input type="text" placeholder="Novo nome de usuário: " name="newNameUser" id="inputNomeUser"></li>
+                        <li><input type='email' name='EmailLogin' placeholder='Digite seu Email: ' id="inputEmail"></li>
+                        <li><input type='password' name='SenhaLogin' placeholder='Digite sua Senha: ' id="inputSenha"></li>
+                        <li><button name="btn" id="btn" type="submit" style="margin:2% 33%">Alterar</button></li>
+                    </ul>
 
-                    <li><input type="email" placeholder="Novo Email: " name="novoEmail" id="inputNomeUser"></li>
-                    <li><input type='email' name='Email' placeholder='Digite seu Email: ' id="inputEmail"></li>
-                    <li><input type='password' name='Senha' placeholder='Digite sua Senha: ' id="inputSenha"></li>
-                    <li><button name="btn" id="btn" type="submit" style="margin-top:3%; margin-bottom:13%;">Alterar</button></li>
-                </ul>
+                </form>
 
-            </form>
+                <button onclick="FuncaoEmail()" style="margin-bottom:2%">Alterar Email</button>
+                <form action="verificacaoEmailPHP.php" method="post" class="campo2" style="margin-right: 12%;">
+                    <ul>
 
-            <button onclick="FuncaoSenha()" style="margin:2% 0  2% 0">Alterar Senha</button>
+                        <li><input type="email" placeholder="Novo Email: " name="novoEmail" id="inputNomeUser"></li>
+                        <li><input type='email' name='Email' placeholder='Digite seu Email: ' id="inputEmail"></li>
+                        <li><input type='password' name='Senha' placeholder='Digite sua Senha: ' id="inputSenha"></li>
+                        <li><button name="btn" id="btn" type="submit" style="margin-top:3%; margin-bottom:13%;">Alterar</button></li>
+                    </ul>
 
-            <form action="verificacaoSenhaPHP.php" method="post" class="campo3">
-                <ul>
-                    <li><input type="password" placeholder="Nova Senha: " name="novaSenha" id="inputNomeUser"></li>
-                    <li><input type='email' name='Email' placeholder='Digite seu Email: ' id="inputEmail"></li>
-                    <li><input type='password' name='Senha' placeholder='Digite sua Senha: ' id="inputSenha"></li>
-                    <li><button name="btn" id="btn" type="submit" style="margin-top:3%">Alterar</button></li>
-                </ul>
-            </form>
+                </form>
+
+                <button onclick="FuncaoSenha()" style="margin:2% 10%  2% 0">Alterar Senha</button>
+
+                <form action="verificacaoSenhaPHP.php" method="post" class="campo3" style="margin-right: 12%;">
+                    <ul>
+                        <li><input type="password" placeholder="Nova Senha: " name="novaSenha" id="inputNomeUser"></li>
+                        <li><input type='email' name='Email' placeholder='Digite seu Email: ' id="inputEmail"></li>
+                        <li><input type='password' name='Senha' placeholder='Digite sua Senha: ' id="inputSenha"></li>
+                        <li><button name="btn" id="btn" type="submit" style="margin-top:3%;">Alterar</button></li>
+                    </ul>
+                </form>
+            </div>
         </div>
     </main>
 
