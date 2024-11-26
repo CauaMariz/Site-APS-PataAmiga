@@ -1,0 +1,528 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'barlow-condensed', sans-serif;    
+}
+
+body {
+    height: 100vh;
+    background-image: url(img/FundoBody.png);
+    background-size: contain;
+}
+
+body>img {
+    width: 100%;
+    height: 100%;
+    object-fit: scale-down;
+    display: flex;
+}
+
+nav.menu-lateral {
+    width: 100px;
+    height: 100%;
+    background-color: #418CBE;
+    padding: 40px 0 40px 1%;
+    box-shadow: 3px 0 0 white;
+    position: fixed;
+    left: 0;
+    overflow: hidden;
+    transition: .5s;
+}
+
+nav.menu-lateral:hover {
+    width: 300px;
+}
+
+ul {
+    height: 100%;
+    list-style-type: none;
+
+}
+
+ul li.item-menu-lateral {
+    transition: .5s;
+    border-top-left-radius: 100px;
+    border-bottom-left-radius: 100px;
+}
+
+ul li.item-menu-lateral:hover {
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+ul li.item-menu-lateral a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 30px 4%;
+    display: flex;
+    margin-bottom: 1.5%;
+    line-height: 40px;
+
+}
+
+ul li.item-menu-lateral a .txt-link {
+    margin-left: 50px;
+    text-wrap: nowrap;
+}
+
+ul li.item-menu-lateral a .icon>i {
+    font-size: 30px;
+    margin-left: 15px;
+
+}
+
+#cabecalho {
+    display: block;
+    position: static;
+    width: 100%;
+    height: 100px;
+    background-color: #418CBE;
+    box-shadow: 0 3px 0 white;
+    align-items: center;
+}
+
+.margem {
+    display: block;
+    width: 95%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.margem>img {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    object-position: center;
+    object-fit: contain;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+main.conteudo {
+    display: flexbox;
+    padding: 50px;
+    margin-right: 50px;
+    margin-left: 150px;
+    height: 100%;
+    width: auto;
+    align-items: center;
+    justify-content: center;
+    padding-top: 100px;
+
+}
+
+.item {
+    display: block;
+    align-items: center;
+    width: 200px;
+    height: 300px;
+    text-align: center;
+    margin: 50px;
+    border: 1px black;
+
+}
+
+.logo {
+    display: flexbox;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    text-align: center;
+}
+.LogoPataAmiga{
+    margin-left: 10%;
+    margin-top: -0.01%;
+
+}
+.logo img {
+    align-self: center;
+    width: 100px;
+    height: 100px;
+}
+
+.slider {
+    margin: 0 auto;
+    width: 1000px;
+    height: 400px;
+    overflow: hidden;
+    align-items: center;
+}
+
+
+.slider img {
+    width:1200px;
+    
+}
+
+
+.imgLogin {
+    display: flex;
+    margin-top: 1.8%; 
+    width: 10px;
+    height: 20px;
+    margin-right: 2%;
+}
+.imgCadastro{
+    display: flex;
+    margin-top: 2%; 
+    width: 10px;
+    height: 20px;
+}
+.Ver {
+   display: flex;
+    min-height: 30vh;
+    max-width: 50%;
+    background-color: #418CBE;
+    color: #fff;
+    padding: 1rem;
+    word-wrap: break-word;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 1px 1px 6px 1px rgb(90, 90, 90);
+}
+
+.conteudoCep {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    left: 10%;
+    margin: 0 auto;
+    border-radius: 10px;
+    margin-top: 1%;
+    background-color: #fcfcfc;
+    width: 500px;
+    height: 550px;
+    padding-right: 2%;
+    padding-left: 2%;
+}
+
+.CampoLogin {
+    display: flexbox;
+    text-align: center;
+    margin: 0 auto;
+    border-radius: 10px;
+    margin-top: 5%;
+    position: relative;
+    background-color: #fcfcfc;
+    width: 500px;
+    height: 500px;
+    padding-right: 2%;
+    padding-left: 2%;
+}
+
+.CampoLogin input {
+    width: 270px;
+    border-radius: 5px;
+}
+
+.CampoLogin button {
+    width: 70px;
+    border: 0;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 8%;
+    transition: 0.4s;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: transparent;
+}
+
+.CampoLogin button:hover {
+    transition: 0.4s;
+    box-shadow: 1px 1px 5px 1px rgba(86, 159, 201, 0.63);
+}
+
+.IconsLogin {
+    margin-top: 20%;
+}
+
+.TituloCampoLogin {
+    position: relative;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+    top: 5%;
+    font-size: 50px;
+}
+
+.IconsLogin img {
+    cursor: pointer;
+    margin-left: 5%;
+    transition: 0.3s;
+}
+
+.IconsLogin img:hover {
+    transition: 0.3s;
+    transform: translateY(-8%);
+}
+
+.conteudoCep label {
+    color: rgb(39, 39, 39);
+    font-size: 15px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 600;
+    margin-top: 1%;
+}
+
+.conteudoCep input {
+    margin-left: 2%;
+    width: 270px;
+    border-radius: 5px;
+}
+
+.conteudoCep span {
+    margin-left: 2%;
+}
+
+.conteudoCep input {
+    margin-right: 5%;
+}
+
+.conteudoCep a {
+    color: #242424;
+    font-size: 15px;
+    position: relative;
+    left: 1vw;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: transparent;
+    text-decoration: none;
+    transition: 0.4s;
+}
+
+.conteudoCep a:hover {
+    transition: 0.4s;
+    box-shadow: 1px 1px 5px 1px rgba(86, 159, 201, 0.63);
+}
+
+.conteudoCep button {
+    width: 70px;
+    border: 0;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 8%;
+    transition: 0.4s;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: transparent;
+}
+
+.conteudoCep button:hover {
+    transition: 0.4s;
+    box-shadow: 1px 1px 5px 1px rgba(86, 159, 201, 0.63);
+}
+
+#campo {
+    display: block;
+    align-items: center;
+    text-align: justify;
+    line-height: 25px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#ButtonCerto {
+    display: flex;
+    margin-top: 10%;
+    cursor: pointer;
+    position: relative;
+    padding: 3px;
+    border: 0;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 5px;
+    color: #fff;
+    background-color: #418CBE;
+    box-shadow: 1px 1px 6px 1px rgb(69, 69, 69);
+}
+
+#ButtonErrado {
+    display: flex;
+    cursor: pointer;
+    position: relative;
+    left: 82%;
+    margin-top: -13.3%;
+    padding: 3px;
+    border: 0;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 5px;
+    color: #fff;
+    background-color: #418CBE;
+    box-shadow: 1px 1px 6px 1px rgb(69, 69, 69);
+}
+
+@keyframes ImgPula {
+    0% {
+        scale: 0;
+    }
+
+    100% {
+        scale: 1;
+    }
+}
+
+#ImagemCorreto {
+    display: flex;
+    margin: 0 auto;
+    margin-top: -100%;
+    scale: 1;
+    transition: 0.6s;
+    margin-left: 5%;
+    animation: ImgPula 1s ease-in-out;
+}
+
+.IconsCadastro {
+    margin-top: 10%;
+}
+
+.IconsCadastro img {
+    cursor: pointer;
+    margin-left: 5%;
+    transition: 0.3s;
+}
+
+.IconsCadastro img:hover {
+    transition: 0.3s;
+    transform: translateY(-8%);
+}
+
+.Rodape {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #418CBE;
+    height: 180px;
+    width: 100%;
+}
+
+.Rodape a {
+    display: block;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    width: 120px;
+    margin-left: 1%;
+    color: #fcfcfc;
+    text-decoration: none;
+}
+
+.Rodape a:hover {
+    text-decoration: underline;
+}
+
+.Rodape h4 {
+    padding-top: 1%;
+    font-size: 20px;
+    margin-left: 1%;
+    margin-top: 2%;
+}
+.Bloco1{
+    margin-left: 10%;
+}
+.Bloco1,
+.Bloco2,.Bloco3,.Bloco4,.Bloco5 {
+    display: flex;
+    flex-direction: column;
+    line-height: 22px;
+    align-items: flex-start;
+    margin-right: 0;
+    min-width: auto;
+}
+.Bloco2,.Bloco3,.Bloco4,.Bloco5 {
+    margin-top: -2%;
+}
+.Bloco3,.Bloco4{
+    margin-top: -3%;
+}
+.Bloco5{
+    margin-right: 5%;
+}
+.Bloco4{
+    display: inline;
+}
+.Bloco4 img {   
+    padding-top: 2%;
+    width: 35px;
+    cursor: pointer;
+}
+.conteudoMainCep{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+/*
+.barraPesquisa{
+    justify-content: center;
+    margin: 0 auto;
+    position: relative;
+    top: 40%;
+    width: 30%;
+    border-radius: 10px;
+    padding: 7px;
+    border: none;
+    display: flex;
+    
+}
+#btnPesquisa{
+    display: block;
+    position: absolute;
+    border: none;
+    border-radius: 3px;
+    padding: 4px;
+    top: 7%;
+    cursor: pointer;
+    left: 67%;
+}
+*/
+.TituloCadastro{
+    position: relative;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+    top: 2%;
+    font-size: 50px;
+}
+.FormCadastro{
+    
+    margin: 0 auto;
+}
+.linkSair{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #fcfcfc;
+    float: left;
+    position: relative;
+    left: 10%;
+    top: 40%;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: 600;
+}
+.linkPerfil{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #fcfcfc;
+    float: left;
+    position: relative;
+    left: 12%;
+    top: 40%;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: 600;
+}
+.tituloSeuPerfil{
+    display: flex;
+    margin: 0 auto;
+ 
+    border-radius: 10px;
+    width: 200px;
+    justify-content: center;
+    text-align: center;
+    font-size: 25px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: rgb(50, 163, 255);
+    color: #242424;
+}
