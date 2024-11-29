@@ -161,7 +161,7 @@
 
     <main class="conteudo">
         <div class="slider">
-            <img src="img/BannerHome.png" alt="" class="BannerHome" id="imgHome">
+            <img src="img/BannerHome.jpg" alt="" class="BannerHome" id="imgHome">
         </div>
     </main>
 
