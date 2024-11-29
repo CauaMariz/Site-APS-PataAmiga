@@ -1,4 +1,4 @@
-let imgs = ['img/BannerCatalogoAcessorios.png', 'img/BannerCatalogoRacoes.png', 'img/BannerMenu.png', 'img/BannerHome.png'];
+let imgs = ['img/BannerCatalogoAcessorios.jpg', 'img/BannerCatalogoRacoes.jpg', 'img/BannerMenu.png', 'img/BannerHome.jpg'];
 let Banner = document.querySelector('#imgHome');
 let index = 0;
 
