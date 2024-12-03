@@ -19,9 +19,7 @@
     integrity="sha384-dpuaG1suU0eT09tx5plTaGMLBsfDLzUCCUXOY2j/LSvXYuG6Bqs43ALlhIqAJVRb" crossorigin="anonymous">
 
   <style>
-    body {
-      height: 900px;
-    }
+
   </style>
 </head>
 
@@ -74,7 +72,7 @@
       </li>
 
       <li class="item-menu-lateral">
-        <a href="#">
+        <a href="carrinho.php">
 
           <span class="icon">
             <i class="bi bi-cart"></i>
@@ -88,7 +86,7 @@
       </li>
 
       <li class="item-menu-lateral">
-        <a href="#">
+        <a href="institucional.php">
 
           <span class="icon">
             <i class="bi bi-question-lg"></i>
@@ -182,7 +180,7 @@
       </form>
     </main>
   </main>
-  
+
   <footer class="Rodape">
     <div class="Bloco1">
       <h4>Inicio</h4>

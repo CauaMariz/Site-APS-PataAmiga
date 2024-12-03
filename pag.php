@@ -66,7 +66,7 @@ if (empty($_SESSION['email']) || empty($_SESSION['senha'])) {
         .campo {
             width: 300px;
             display: flex;
-
+            margin-bottom: 10%;
             margin-top: 2%;
         }
 
@@ -77,12 +77,10 @@ if (empty($_SESSION['email']) || empty($_SESSION['senha'])) {
 
         input,
         button {
-
             padding: 5px;
             border: 1px solid grey;
             background-color: azure;
             border-radius: 10px;
-
         }
 
         input {
@@ -130,9 +128,8 @@ if (empty($_SESSION['email']) || empty($_SESSION['senha'])) {
             display: block;
             margin: 0 auto;
             margin-top: 5%;
-
-            background-color: white;
-            box-shadow: 1px 1px 5px 1px rgb(24, 170, 255);
+            background-color: #418cbe;
+            box-shadow: 1px 1px 5px 1px rgba(236, 236, 236, 0.61);
             width: 70%;
             min-height: 80%;
             height: auto;
@@ -140,10 +137,13 @@ if (empty($_SESSION['email']) || empty($_SESSION['senha'])) {
             padding-bottom: 2%;
             align-items: center;
             border-radius: 10px;
+
         }
 
         .Buttons {
-            justify-items: end;
+            justify-items: center;
+            margin-left: 10%;
+
         }
 
         .LogoPataAmiga {
@@ -163,7 +163,7 @@ if (empty($_SESSION['email']) || empty($_SESSION['senha'])) {
         }
 
         .nomeUser {
-            color: rgb(50, 163, 255);
+            color: white;
         }
 
         .TituloBemVindo {
@@ -180,7 +180,7 @@ if (empty($_SESSION['email']) || empty($_SESSION['senha'])) {
             width: 100px;
             position: absolute;
             margin-top: 5%;
-            margin-left: 1.5%
+            margin-left: 1.5%;
         }
 
         .linkImgUser {
@@ -190,11 +190,16 @@ if (empty($_SESSION['email']) || empty($_SESSION['senha'])) {
             font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
             font-size: 13px;
             text-decoration: none;
-            color: BLACK;
+            color: white;
+            font-weight: 600;
         }
 
         .linkImgUser:hover {
             text-decoration: underline;
+        }
+
+        .conteudo {
+            margin-bottom: 10%;
         }
     </style>
 </head>
@@ -249,7 +254,7 @@ if (empty($_SESSION['email']) || empty($_SESSION['senha'])) {
             </li>
 
             <li class="item-menu-lateral">
-                <a href="#">
+                <a href="carrinho.php">
 
                     <span class="icon">
                         <i class="bi bi-cart"></i>
@@ -263,7 +268,7 @@ if (empty($_SESSION['email']) || empty($_SESSION['senha'])) {
             </li>
 
             <li class="item-menu-lateral">
-                <a href="#">
+                <a href="institucional.php">
 
                     <span class="icon">
                         <i class="bi bi-question-lg"></i>
@@ -350,7 +355,7 @@ if (empty($_SESSION['email']) || empty($_SESSION['senha'])) {
 
 
                 <button onclick="Funcao()" style="margin-bottom:2%;margin-top:5%;">Alterar nome de usuário</button>
-                <form action="verificacaoLoginPHP.php" method="post" class="campo" style="margin-right: 4%;">
+                <form action="verificacaoLoginPHP.php" method="post" class="campo" style="margin-right:10%;">
                     <ul>
                         <li><input type="text" placeholder="Novo nome de usuário: " name="newNameUser" id="inputNomeUser"></li>
                         <li><input type='email' name='EmailLogin' placeholder='Digite seu Email: ' id="inputEmail"></li>

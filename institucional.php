@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -8,14 +11,42 @@
     <link rel="stylesheet" href="home.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pata_Amiga</title>
-
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://kit.fontawesome.com/a059536d20.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-</head>
 
+    <style>
+        .blocos {
+            padding: 15px 100px;
+            font-size: 24px;
+            background-color: #418CBE;
+            border: #418CBE;
+            border-radius: 10px;
+            cursor: pointer;
+            color: white;
+            outline: 0;
+        }
+
+        .conteudo {
+            display: block;
+            margin: 0 auto;
+            height: 100vw;
+            width: 100%;
+            justify-items: center;
+        }
+
+        .conteudo div {
+            width: 500px;
+            height: 10vh;
+            display: flex;
+            margin-top: 3%;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
 
 <body background="img/FundoBody.png">
 
@@ -102,38 +133,22 @@
 
         <div class="margem">
 
-            <!--
-                <input type="search" name="" id="barraPesquisa" class="barraPesquisa" list="barraPesquisa"
-                     placeholder="Pesquisar">
-    
-                    <button id="btnPesquisa">Pesquisar</button>
-                <datalist id="barraPesquisa">
-                    <option value="Rações">
-                    <option value="Brinquedos">
-                    <option value="Roupas para cachorro">
-                    <option value="Casas para cachorros">
-                    <option value="Cadastrar meu Pet">
-                </datalist>
-            
-            -->
+
 
             <div class="logo">
 
                 <?php
-                session_start();
                 if (isset($_SESSION['email']) && isset($_SESSION['senha'])) {
                     echo "<a href=\"Logout.php\" class=\"linkSair\">Sair</a>";
                     echo "<a href=\"pag.php\" class=\"linkPerfil\">Ver perfil</a>";
                 }
                 ?>
-
                 <img src="img/icons8-login-arredondado-à-direita-50 (2).png" alt=""
                     style="width: 30px; height: 30px; line-height:100px; float: right; cursor: pointer;"
                     onclick="location.href='login.php'" class="imgCadastro">
 
                 <img src="img/icons8-cadastro-48.png" alt="" class="imgLogin"
-                    style="width: 35px; height: 35px; float: right; cursor: pointer;"
-                    onclick="location.href='Cadastro.php'">
+                    style="width: 35px; height: 35px; float: right; cursor: pointer;" onclick="location.href='Cadastro.php'">
 
                 <img src="img/LogoPataAmigaBranco.png" alt="LOGO_PATA_AMIGA" class="LogoPataAmiga">
 
@@ -157,12 +172,18 @@
 
     </header>
 
-
-
     <main class="conteudo">
-        <div class="slider">
-            <img src="img/BannerHome.jpg" alt="" class="BannerHome" id="imgHome">
-        </div>
+
+        <div class="blocos">Política e Privacidade</div>
+
+        <div class="blocos">Atendimento</div>
+
+        <div class="blocos">Eventos</div>
+
+        <div class="blocos">Sobre Nós</div>
+
+        <div class="blocos">Ajuda</div>
+
     </main>
 
     <footer class="Rodape">
@@ -197,8 +218,6 @@
             <a href="#">Termos de uso</a>
         </div>
     </footer>
-
-    <script src="TrocaImgHome.js"></script>
 </body>
 
 </html>

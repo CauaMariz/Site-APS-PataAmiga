@@ -14,8 +14,14 @@
     <script src="https://kit.fontawesome.com/a059536d20.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-</head>
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css"
+        integrity="sha384-dpuaG1suU0eT09tx5plTaGMLBsfDLzUCCUXOY2j/LSvXYuG6Bqs43ALlhIqAJVRb" crossorigin="anonymous">
+
+    <style>
+
+    </style>
+</head>
 
 <body background="img/FundoBody.png">
 
@@ -102,20 +108,7 @@
 
         <div class="margem">
 
-            <!--
-                <input type="search" name="" id="barraPesquisa" class="barraPesquisa" list="barraPesquisa"
-                     placeholder="Pesquisar">
-    
-                    <button id="btnPesquisa">Pesquisar</button>
-                <datalist id="barraPesquisa">
-                    <option value="Rações">
-                    <option value="Brinquedos">
-                    <option value="Roupas para cachorro">
-                    <option value="Casas para cachorros">
-                    <option value="Cadastrar meu Pet">
-                </datalist>
-            
-            -->
+
 
             <div class="logo">
 
@@ -126,14 +119,12 @@
                     echo "<a href=\"pag.php\" class=\"linkPerfil\">Ver perfil</a>";
                 }
                 ?>
-
                 <img src="img/icons8-login-arredondado-à-direita-50 (2).png" alt=""
                     style="width: 30px; height: 30px; line-height:100px; float: right; cursor: pointer;"
                     onclick="location.href='login.php'" class="imgCadastro">
 
                 <img src="img/icons8-cadastro-48.png" alt="" class="imgLogin"
-                    style="width: 35px; height: 35px; float: right; cursor: pointer;"
-                    onclick="location.href='Cadastro.php'">
+                    style="width: 35px; height: 35px; float: right; cursor: pointer;" onclick="location.href='Cadastro.php'">
 
                 <img src="img/LogoPataAmigaBranco.png" alt="LOGO_PATA_AMIGA" class="LogoPataAmiga">
 
@@ -157,12 +148,8 @@
 
     </header>
 
-
-
     <main class="conteudo">
-        <div class="slider">
-            <img src="img/BannerHome.jpg" alt="" class="BannerHome" id="imgHome">
-        </div>
+
     </main>
 
     <footer class="Rodape">
@@ -197,8 +184,6 @@
             <a href="#">Termos de uso</a>
         </div>
     </footer>
-
-    <script src="TrocaImgHome.js"></script>
 </body>
 
 </html>
