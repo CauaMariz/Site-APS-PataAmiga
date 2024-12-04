@@ -57,7 +57,7 @@ if (empty($_SESSION['email']) || empty($_SESSION['senha'])) {
             border: 1px solid red;
         }
 
-        h2 {
+        .TituloBemVindo, .tituloSeuPerfil {
             display: flex;
             margin: 0 auto;
             font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -116,7 +116,11 @@ if (empty($_SESSION['email']) || empty($_SESSION['senha'])) {
             width: 200px;
             margin-right: 10%;
         }
-
+        .bntsInicio{
+            width: 400px;
+            height: 40px;
+            font-size: 18px;
+        }
         button:hover {
             transition: 0.3s ease-in-out;
             transform: translateX(-2%);
@@ -137,13 +141,14 @@ if (empty($_SESSION['email']) || empty($_SESSION['senha'])) {
             padding-bottom: 2%;
             align-items: center;
             border-radius: 10px;
-
+            margin-bottom: 10vw;
+            overflow: hidden;
         }
 
         .Buttons {
             justify-items: center;
             margin-left: 10%;
-
+            width: auto;
         }
 
         .LogoPataAmiga {
@@ -177,7 +182,7 @@ if (empty($_SESSION['email']) || empty($_SESSION['senha'])) {
         }
 
         .imgIcon {
-            width: 100px;
+            width: 130px;
             position: absolute;
             margin-top: 5%;
             margin-left: 1.5%;
@@ -185,7 +190,7 @@ if (empty($_SESSION['email']) || empty($_SESSION['senha'])) {
 
         .linkImgUser {
             position: absolute;
-            margin-left: 2%;
+            margin-left: 2.5%;
             margin-top: 13%;
             font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
             font-size: 13px;
@@ -200,6 +205,43 @@ if (empty($_SESSION['email']) || empty($_SESSION['senha'])) {
 
         .conteudo {
             margin-bottom: 10%;
+        }
+        .BarraLateral{
+            display: flex;
+            background-color: #242424;
+            color: aliceblue;
+            margin: auto;
+            margin-right: 1vw;
+            width: 15vw;
+            min-height: 30vw;
+            height: auto;
+            margin-top: -13.5vw;
+            border-radius: 10px;
+     
+        }
+        @media (max-width:1670px) {
+            .bntsInicio{
+                width: auto;
+                min-width: 100px;
+                height: auto;
+            }
+            .BarraLateral{
+               max-height: 20vw;
+            }
+        }
+        @media (max-width:1200px) {
+            .BarraLateral{
+                max-width: 12vw;
+                padding: 2%;
+            }
+        }
+        .BarraLateral .h2MinhasCompras{
+            margin: 4%;
+            font-size: 20px;
+            text-align: start;
+        }
+        footer{
+            margin-top: 10vw;
         }
     </style>
 </head>
@@ -354,7 +396,7 @@ if (empty($_SESSION['email']) || empty($_SESSION['senha'])) {
             <div class="Buttons">
 
 
-                <button onclick="Funcao()" style="margin-bottom:2%;margin-top:5%;">Alterar nome de usuário</button>
+                <button onclick="Funcao()" style="margin-bottom:2%;margin-top:5%;" class="bntsInicio">Alterar nome de usuário</button>
                 <form action="verificacaoLoginPHP.php" method="post" class="campo" style="margin-right:10%;">
                     <ul>
                         <li><input type="text" placeholder="Novo nome de usuário: " name="newNameUser" id="inputNomeUser"></li>
@@ -365,28 +407,31 @@ if (empty($_SESSION['email']) || empty($_SESSION['senha'])) {
 
                 </form>
 
-                <button onclick="FuncaoEmail()" style="margin-bottom:2%">Alterar Email</button>
+                <button onclick="FuncaoEmail()" style="margin-bottom:2%" class="bntsInicio">Alterar Email</button>
                 <form action="verificacaoEmailPHP.php" method="post" class="campo2" style="margin-right: 12%;">
                     <ul>
 
                         <li><input type="email" placeholder="Novo Email: " name="novoEmail" id="inputNomeUser"></li>
                         <li><input type='email' name='Email' placeholder='Digite seu Email: ' id="inputEmail"></li>
                         <li><input type='password' name='Senha' placeholder='Digite sua Senha: ' id="inputSenha"></li>
-                        <li><button name="btn" id="btn" type="submit" style="margin-top:3%; margin-bottom:13%;">Alterar</button></li>
+                        <li><button name="btn" id="btn" type="submit" style="margin-top:3%; margin-bottom:13%; margin-left:25%">Alterar</button></li>
                     </ul>
 
                 </form>
 
-                <button onclick="FuncaoSenha()" style="margin:2% 10%  2% 0">Alterar Senha</button>
+                <button onclick="FuncaoSenha()" style="margin:2% 10%  2% 0" class="bntsInicio">Alterar Senha</button>
 
                 <form action="verificacaoSenhaPHP.php" method="post" class="campo3" style="margin-right: 12%;">
                     <ul>
                         <li><input type="password" placeholder="Nova Senha: " name="novaSenha" id="inputNomeUser"></li>
                         <li><input type='email' name='Email' placeholder='Digite seu Email: ' id="inputEmail"></li>
                         <li><input type='password' name='Senha' placeholder='Digite sua Senha: ' id="inputSenha"></li>
-                        <li><button name="btn" id="btn" type="submit" style="margin-top:3%;">Alterar</button></li>
+                        <li><button name="btn" id="btn" type="submit" style="margin-top:3%; margin-left:25%">Alterar</button></li>
                     </ul>
                 </form>
+            </div>
+            <div class="BarraLateral">
+                <h2 class="h2MinhasCompras">Minhas Compras</h2>
             </div>
         </div>
     </main>
