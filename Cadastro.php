@@ -236,13 +236,13 @@ if (isset($_POST["submit"])) {
                     <img src="img/icons8-mac-os-50.png" alt="" style="width: 48px;">
                 </div>
                 <button type="submit" name="submit" onsubmit="Ver()">Enviar</button>
-                <a href="login.html">Login</a>
+                <a href="login.php">Login</a>
             </main>
         </form>
         <div id="campo"></div>
     </main>
 
-    <footer class="Rodape">
+    <footer class="Rodape" style="margin-top:10vw">
         <div class="Bloco1">
             <h4>Inicio</h4>
             <a href="home.html">Home</a>

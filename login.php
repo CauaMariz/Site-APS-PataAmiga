@@ -181,7 +181,7 @@
     </main>
   </main>
 
-  <footer class="Rodape">
+  <footer class="Rodape" style="margin-top:10vw">
     <div class="Bloco1">
       <h4>Inicio</h4>
       <a href="home.html">Home</a>

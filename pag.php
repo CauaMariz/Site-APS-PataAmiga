@@ -134,7 +134,7 @@ if (empty($_SESSION['email']) || empty($_SESSION['senha'])) {
             margin-top: 5%;
             background-color: #418cbe;
             box-shadow: 1px 1px 5px 1px rgba(236, 236, 236, 0.61);
-            width: 70%;
+            width: 100%;
             min-height: 80%;
             height: auto;
             padding-top: 2%;
@@ -189,9 +189,11 @@ if (empty($_SESSION['email']) || empty($_SESSION['senha'])) {
         }
 
         .linkImgUser {
-            position: absolute;
-            margin-left: 2.5%;
-            margin-top: 13%;
+            display: flex;
+            margin-left: 3vw;
+            position: relative;
+            top: 15vw;
+            align-self:center;
             font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
             font-size: 13px;
             text-decoration: none;
@@ -208,40 +210,38 @@ if (empty($_SESSION['email']) || empty($_SESSION['senha'])) {
         }
         .BarraLateral{
             display: flex;
-            background-color: #242424;
-            color: aliceblue;
+            background-color: aliceblue;
+            color: #242424;
             margin: auto;
             margin-right: 1vw;
-            width: 15vw;
+            width: 20vw;
             min-height: 30vw;
             height: auto;
-            margin-top: -13.5vw;
+            margin-top: -19vw;
             border-radius: 10px;
      
         }
-        @media (max-width:1670px) {
-            .bntsInicio{
-                width: auto;
-                min-width: 100px;
-                height: auto;
-            }
-            .BarraLateral{
-               max-height: 20vw;
-            }
-        }
+        
         @media (max-width:1200px) {
             .BarraLateral{
                 max-width: 12vw;
-                padding: 2%;
+                padding-right: 4%;
+                
+            }
+            .bntsInicio{
+                width: auto;
+            }
+            .linkImgUser{
+                top:20vw;
             }
         }
-        .BarraLateral .h2MinhasCompras{
+        .h2MinhasCompras{
             margin: 4%;
             font-size: 20px;
             text-align: start;
         }
         footer{
-            margin-top: 10vw;
+            margin-top: 40vw;
         }
     </style>
 </head>
