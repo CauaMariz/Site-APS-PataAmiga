@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -14,6 +17,76 @@
     <script src="https://kit.fontawesome.com/a059536d20.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <style>
+        .BannersHome {
+            width: 935px;
+            height: 520px;
+            border-radius: 20px;
+            overflow: hidden;
+            position: absolute;
+            left: 52%;
+            top: 5%;
+            transform: translate(-50%, 50%);
+            box-shadow: 1px 1px 6px 1px grey;
+        }
+
+        .slides {
+            display: flex;
+            width: 400%;
+            height: 100%;
+        }
+
+        .slides input {
+            display: none;
+        }
+
+        .imgs {
+            width: 25%;
+            transition: .6s;
+        }
+
+        .imgs img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .nav {
+            position: absolute;
+            bottom: 5px;
+            left: 50%;
+            transform: translate(-50%);
+            display: flex;
+        }
+
+        .nav .navs {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            border: 2px solid grey;
+            margin: 6px;
+            cursor: pointer;
+            transition: .9s;
+        }
+
+        #radio-1:checked~.one {
+            margin-left: 0;
+        }
+
+        #radio-2:checked~.one {
+            margin-left: -25%;
+        }
+
+        #radio-3:checked~.one {
+            margin-left: -50%;
+        }
+
+        .nav .navs:hover {
+            background-color: aliceblue;
+            border: 1px solid aliceblue;
+        }
+    </style>
 </head>
 
 
@@ -120,7 +193,6 @@
             <div class="logo">
 
                 <?php
-                session_start();
                 if (isset($_SESSION['email']) && isset($_SESSION['senha'])) {
                     echo "<a href=\"Logout.php\" class=\"linkSair\">Sair</a>";
                     echo "<a href=\"pag.php\" class=\"linkPerfil\">Ver perfil</a>";
@@ -160,8 +232,30 @@
 
 
     <main class="conteudo">
-        <div class="slider">
-            <img src="img/BannerHome.jpg" alt="" class="BannerHome" id="imgHome">
+        <div class="BannersHome">
+            <div class="slides">
+                <input type="radio" name="radio" id="radio-1" checked>
+                <input type="radio" name="radio" id="radio-2">
+                <input type="radio" name="radio" id="radio-3">
+
+                <div class="imgs one">
+                    <img src="img/BannerCatalogoAcessorios.jpg" alt="">
+                </div>
+                <div class="imgs">
+                    <img src="img/BannerHome.jpg" alt="">
+                </div>
+
+                <div class="imgs">
+                    <img src="img/BannerCatalogoRacoes.jpg" alt="">
+                </div>
+
+            </div>
+            <div class="nav">
+                <label for="radio-1" class="navs"></label>
+                <label for="radio-2" class="navs"></label>
+                <label for="radio-3" class="navs"></label>
+            </div>
+        </div>
         </div>
     </main>
 
