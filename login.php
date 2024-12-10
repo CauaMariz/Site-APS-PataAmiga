@@ -169,6 +169,7 @@
           <input type="password" class="form-control" placeholder="Senha" aria-label="Server" id="Senha" name="Senha">
         </div>
 
+        <a href="" style="float:left">Esqueceu sua senha?</a>
 
         <div class="IconsLogin">
           <img src="img/icons8-google-logo-47.png" alt="">
@@ -181,7 +182,7 @@
     </main>
   </main>
 
-  <footer class="Rodape" style="margin-top:10vw">
+  <footer class="Rodape" style="margin-top: 10vw;">
     <div class="Bloco1">
       <h4>Inicio</h4>
       <a href="home.html">Home</a>
