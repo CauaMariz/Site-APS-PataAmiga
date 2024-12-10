@@ -19,7 +19,14 @@
     integrity="sha384-dpuaG1suU0eT09tx5plTaGMLBsfDLzUCCUXOY2j/LSvXYuG6Bqs43ALlhIqAJVRb" crossorigin="anonymous">
 
   <style>
-
+    .hreforgetPass{
+      float: left;
+      text-decoration: none;
+      color: black;
+    }
+    .hreforgetPass:hover{
+      text-decoration: underline;
+    }
   </style>
 </head>
 
@@ -169,7 +176,7 @@
           <input type="password" class="form-control" placeholder="Senha" aria-label="Server" id="Senha" name="Senha">
         </div>
 
-        <a href="" style="float:left">Esqueceu sua senha?</a>
+        <a href="#" class="hreforgetPass">Esqueceu sua senha?</a>
 
         <div class="IconsLogin">
           <img src="img/icons8-google-logo-47.png" alt="">
